@@ -1,0 +1,279 @@
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>
+
+Статы Dead Impact
+
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/stat_calc.css">
+
+</head>
+
+<body>
+	<div class = "title" align="center">
+		DEAD IMPACT
+	</div>
+	<form name="Calculator" id="calc" class="main">
+		<table border="2" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0" class="calculator" hidden>
+		<tr>
+			<td>Параметры будут туть</td>
+		</tr>
+		<tr>
+		<td>
+		</td>
+		<td>
+
+		</td>
+		<td>
+
+		</td>
+		</tr>
+		<tr>
+		<td>
+
+		</td>
+		<td>
+
+		</td>
+		<td>
+
+		</td>
+		</tr>
+		</table>
+
+		<table border="2" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0" class = "calculator">
+			<tr>
+				<td class="level">
+					<span>Уровень</span><br>
+					<input type="number" id="lvl" min="0" max="99" value="0" maxlength="2" class="lvl">			
+				</td>
+				<td>
+				Статы
+				</td>
+				<td>
+				Бонус
+				</td>
+				<td>
+				Итого
+				</td>
+				<td nowrap>
+				<span>SP: </span><br><span class="sp" id="sp_counter">0/48</span><br>
+					<span class="less_sp" id="less_sp_sym" hidden>! -</span><span class="sp" id="less_sp_val">0</span>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					VIT 
+				</td>
+				<td>
+					1 + 
+					<input type="number" id="svit" min="0" max="98" maxlength="2" class="stats in_field">
+				</td>
+				<td>
+					<span  id="svit_bon">+0</span>
+				</td>
+				<td>
+					<span id="svit_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="svit_sp">0  &uarr;2</span>
+				</td>
+			</tr>		
+			<tr>
+				<td>
+					STR 
+				</td>
+				<td class="in_field">
+					1 + 
+					<input type="number" id="sstr" min="0" max="98" class="stats">
+				</td>
+				<td>
+					<span  id="sstr_bon">+0</span>
+				</td>
+				<td>
+					<span id="sstr_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="sstr_sp">0  &uarr;2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					DEX 
+				</td>
+				<td class="in_field">
+					1 + 
+					<input type="number" id="sdex" min="0" max="98" class="stats">
+				</td>
+				<td>
+					<span  id="sdex_bon">+0</span>
+				</td>
+				<td>
+					<span id="sdex_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="sdex_sp">0  &uarr;2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					INT 
+				</td>
+				<td class="in_field">
+					1 + 
+					<input type="number" id="sint" min="0" max="98" class="stats">
+				</td>
+				<td>
+					<span  id="sint_bon">+0</span>
+				</td>
+				<td>
+					<span id="sint_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="sint_sp">0  &uarr;2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					AGI 
+				</td>
+				<td class="in_field">
+					1 + 
+					<input type="number" id="sagi" min="0" max="98" class="stats">
+				</td>
+				<td>
+					<span  id="sagi_bon">+0</span>
+				</td>
+				<td>
+					<span id="sagi_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="sagi_sp">0  &uarr;2</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					LUK 
+				</td>
+				<td class="in_field">
+					1 + 
+					<input type="number" id="sluk" min="0" max="98" class="stats">
+				</td>
+				<td>
+					<span  id="sluk_bon">+0</span>
+				</td>
+				<td>
+					<span id="sluk_fin">1</span>
+				</td>
+				<td class="sp">
+					<span id="sluk_sp">0  &uarr;2</span>
+				</td>
+			</tr>
+		</table>
+
+
+		<table border="2" cellpadding="15" cellspacing="12" bgcolor="#c0c0c0" class="calculator">
+			<tr>
+				<td>Бижутерия</td>
+				<td>Ранг</td>
+				<td>Стат</td>
+			</tr>
+			<tr>
+			<td>
+			Кольцо 1:
+			</td>
+			<td>
+				<select id="r1_rank" class="rank jew_ranks">
+					<option value="0">Нет</option>
+					<option value="1">бр.1&#9733;</option>
+					<option value="2">бр.2&#9733;</option>
+					<option value="3">бр.3&#9733;</option>
+					<option value="4">сер.1&#9733;</option>
+					<option value="5">сер.2&#9733;</option>
+					<option value="6">сер.3&#9733;</option>
+					<option value="7">зол.1&#9733;</option>
+					<option value="8">зол.2&#9733;</option>
+					<option value="9">зол.3&#9733;</option>
+				</select>
+			</td>
+			<td nowrap>
+				<select id="r1_stat" class="rank  jew_stats" disabled>
+					<option value="no">Нет</option>
+				</select>
+				<span id="r1_bon">+0</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			Кольцо 2:
+			</td>
+			<td>
+				<select id="r2_rank" class="rank jew_ranks">
+					<option value="0">Нет</option>
+					<option value="1">бр.1&#9733;</option>
+					<option value="2">бр.2&#9733;</option>
+					<option value="3">бр.3&#9733;</option>
+					<option value="4">сер.1&#9733;</option>
+					<option value="5">сер.2&#9733;</option>
+					<option value="6">сер.3&#9733;</option>
+					<option value="7">зол.1&#9733;</option>
+					<option value="8">зол.2&#9733;</option>
+					<option value="9">зол.3&#9733;</option>
+				</select>
+			</td>
+			<td nowrap>
+				<select id="r2_stat" class="rank  jew_stats" disabled>
+					<option value="no">Нет</option>
+				</select>
+				<span id="r2_bon">+0</span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			Амулет:
+			</td>
+			<td>
+				<select id="neck_rank" class="rank neck jew_ranks">
+					<option value="0">Нет</option>
+					<option value="1">бр.1&#9733;</option>
+					<option value="2">бр.2&#9733;</option>
+					<option value="3">бр.3&#9733;</option>
+					<option value="4">сер.1&#9733;</option>
+					<option value="5">сер.2&#9733;</option>
+					<option value="6">сер.3&#9733;</option>
+					<option value="7">зол.1&#9733;</option>
+					<option value="8">зол.2&#9733;</option>
+					<option value="9">зол.3&#9733;</option>
+				</select>
+			</td>
+			<td nowrap>
+				<select id="n1_stat" class="rank jew_stats" disabled>
+					<option value="no">Нет</option>
+				</select>
+				<select id="n1_bon" class="rank jew_bons neck_bon" disabled>
+					<option value="0">+0</option>
+				</select>
+			<br>
+				<select id="n2_stat" class="rank jew_stats" disabled>
+					<option value="no">Нет</option>
+				</select>
+				<select id="n2_bon" class="rank neck_bon" disabled>
+					<option value="0">+0</option>
+				</select>
+			</td>
+			</tr>
+		</table>
+		<script src="scripts/stat_calc.js"></script>
+	</form>
+</body>
+</html>

@@ -1,0 +1,124 @@
+	html {
+		height: 100vh;
+		background-color: #2d3436;
+		background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+		font-family: "Mozilla Text", sans-serif;
+		} 
+		
+	.title {
+		margin-bottom: 10px;
+		padding: 5px 0;
+		font-size: 40px;
+		font-weight: 300;
+		text-align: center;
+		color: red;
+		font-family: "Mozilla Text", sans-serif;
+		}
+		
+	.main {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
+	}	
+	
+	table {
+		text-align: center;
+		font-weight: 700;
+		margin: 30px 30px 30px 30px;
+	}
+	input\[type=button\] {
+		width: 60px;
+		height: 60px;
+		padding: 0;
+		margin: 5px;
+		box-sizing: border-box;
+		background: #ecedef;
+		border: none;
+		font-size: 30px;
+		line-height: 30px;
+		border-radius: 50%;
+		font-weight: 700;
+		color: #5E5858;
+		cursor: pointer;
+		} 
+		
+	input\[type=number\] {
+		height: 60px;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+		background: none;
+		color: red;
+		text-align: left;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 30px;
+		margin: 0 5px;
+		}
+	
+	.rank {
+		padding: 0;
+		box-sizing: border-box;
+		border: solid 1px;
+		border-radius: 25%;
+		background: #bbbcb6;
+		font-size: 18px;
+		line-height: 20px;
+	}
+	
+	.in_field {
+		white-space: nowrap;
+	}
+	
+	.calculator {
+		background-color: #c0c0c0;
+		box-shadow: 0px 0px 0px 10px #666;
+		border: 5px solid black;
+		border-radius: 10px;
+		}
+		
+	.sp {
+		color: transparent;
+		-webkit-background-clip: text;
+		background-image: linear-gradient(to right, #B8860B, #CFB53B);
+		}
+		
+	.less_sp {
+		color: red;
+		font-size: 120%;
+	}
+	.less_sp .sp {
+		font-size: 80%;
+	}
+	
+	.lvl {
+		padding: 0;
+		box-sizing: border-box;
+		border: solid 1px;
+		border-radius: 35%;
+		background: #bbbcb6;
+		font-size: 25px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+	}
+	
+	.stats {
+		padding: 0;
+		box-sizing: border-box;
+		border: solid 1px;
+		border-radius: 15%;
+		background: #bbbcb6;
+		font-size: 15px;
+		width: 40px;
+		height: 20px;
+		text-align: center;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	
