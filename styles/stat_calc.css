@@ -27,7 +27,7 @@
 		font-weight: 700;
 		margin: 30px 30px 30px 30px;
 	}
-	input\[type=button\] {
+	input[type="button"] {
 		width: 60px;
 		height: 60px;
 		padding: 0;
@@ -43,7 +43,7 @@
 		cursor: pointer;
 		} 
 		
-	input\[type=number\] {
+	input[type="number"] {
 		height: 60px;
 		padding: 0;
 		box-sizing: border-box;
@@ -80,6 +80,7 @@
 		
 	.sp {
 		color: transparent;
+		background-clip: text;
 		-webkit-background-clip: text;
 		background-image: linear-gradient(to right, #B8860B, #CFB53B);
 		}
