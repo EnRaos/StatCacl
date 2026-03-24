@@ -91,7 +91,7 @@ function changeCharLvl(lvl){
 }
 function countBaseStat(chStat){ 
 	let statVal = getTagIntValue(chStat);
-	if(statVal > 98){statVal = 98}
+	if(statVal > 119){statVal = 119}
 	charStats[chStat].base = statVal;
 }
 function countStatBons(){
@@ -123,8 +123,9 @@ function countStatPts(chStat){
 	let cost = 2;
 	for(let i=1; i<=value; i++){
 		spCost += cost;
+		console.log("cost:", cost);
 		iter += 1;
-		if(iter == 10){
+		if(i < 80 && iter == 10){
 			cost += 1;
 			iter = 0;
 		}
@@ -135,7 +136,10 @@ function countCharSp(lvl){
 	let sp = 45;
 	let spBon = 0;
 	for(i=1;i<=lvl;i++){
-		if((i % 5) == 0){spBon += 1}
+		if((i % 5) == 0){
+			spBon += 1;
+			if (i>=90){spBon += 1}
+		}
 		sp += (3+spBon);
 	}
 	return sp;
@@ -213,7 +217,8 @@ function fillStatTable(){
 		changeTagText(chStat+bonSuf, '+'+bonStat);
 		changeTagText(chStat+finSuf, finStat);
 		if(baseStat > 0){
-			spCost = Math.floor((baseStat+1)/10) + 2;
+			if(baseStat >= 79){spCost = 10}
+			else{spCost = Math.floor((baseStat+1)/10) + 2}
 			changeTagText(chStat+spSuf, `${spStat}  \u{2191}${spCost}`);
 		}
 		else{
